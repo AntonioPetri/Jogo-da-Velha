@@ -364,10 +364,15 @@ public class Jogo : MonoBehaviour
             Acabou = true;
             Empatou();
         }
+    }
+
+    // Botão de Reset
+
+    public void ResetBotton()
+    {
         if (Acabou && Venceu)
-        {
             Reset();
-        }
+
     }
 
     // Reset do game
@@ -387,3 +392,4 @@ public class Jogo : MonoBehaviour
         Rodada = 0;
     }
 }
+ 
