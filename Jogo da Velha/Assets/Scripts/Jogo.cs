@@ -14,7 +14,7 @@ public class Jogo : MonoBehaviour
     // Contadores
     public void ContadorX()
     {
-        X.text = $"Jogador 1 venceu: {Contadorx++}";
+        X.text = $"Jogador 1 venceu: {Contadorx}";
     }   
     public void ContadorO()
     {

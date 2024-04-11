@@ -2283,7 +2283,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Jogador 2 venceu: '
+  m_text: 'IA venceu: '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3283,19 +3283,11 @@ MonoBehaviour:
   Jogador1: 1
   Venceu: 0
   Acabou: 0
+  IAJogou: 0
   Rodada: 0
   Contadorx: 0
   Contadoro: 0
   Empate: 0
-  Ql1: 0
-  Ql2: 0
-  Ql3: 0
-  Ql4: 0
-  Ql5: 0
-  Ql6: 0
-  Ql7: 0
-  Ql8: 0
-  Ql9: 0
 --- !u!1 &1817098632
 GameObject:
   m_ObjectHideFlags: 0

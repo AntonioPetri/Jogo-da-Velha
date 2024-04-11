@@ -17,10 +17,6 @@ public class Menu : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(2);
     }
-    public void IAImpossivel()
-    {
-        SceneManager.LoadSceneAsync(3);
-    }
     public void QuitGame()
     {
         Application.Quit();

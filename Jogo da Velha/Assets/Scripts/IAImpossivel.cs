@@ -9,24 +9,24 @@ using UnityEngine.UIElements;
 
 public class IAImpossivel : MonoBehaviour
 {
-    public TextMeshProUGUI Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, vezDoJogador, X, O, E;
-    public bool Jogador1 = true, Venceu = false, Acabou = false;
+    public TextMeshProUGUI Q1, Q2, Q3, Q4, Q5, Q6, Q7, Q8, Q9, vezDoJogador, X, O, E; 
+    public bool Jogador1 = true, Venceu = false, Acabou = false, IAJogou = false;
     public int Rodada = 0, Contadorx = 0, Contadoro = 0, Empate = 0;
 
-    // Contadores
+    // PLACAR // CONTADOR X TA COM RODADAS
     public void ContadorX()
     {
-        X.text = $"Jogador 1 venceu: {Contadorx++}";
+        X.text = $"Jogador 1 venceu: {Rodada}";
     }
     public void ContadorO()
     {
-        O.text = $"Jogador 2 venceu: {Contadoro++}";
+        O.text = $"IA venceu: {Contadoro++}";
     }
     public void Empatou()
     {
         E.text = $"Empatou: {Empate++}";
     }
-    public void Start()
+    public void Update()
     {
         ContadorX();
         ContadorO();
@@ -67,6 +67,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -93,6 +94,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -118,6 +120,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }       
@@ -142,6 +145,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -165,6 +169,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ7();
                 IAQ8();
                 IAQ9();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -189,6 +194,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -213,6 +219,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -237,6 +244,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -262,6 +270,7 @@ public class IAImpossivel : MonoBehaviour
                 IAQ8();
                 IAQ9();
                 Rodada1();
+                DeuVelha();
             }
             Vencedor();
         }
@@ -389,7 +398,7 @@ public class IAImpossivel : MonoBehaviour
             ContadorO();
         }
 
-        // Deu velha
+        // DEU VELHA //
 
         if (Rodada == 9 && Venceu == false)
         {
@@ -401,7 +410,15 @@ public class IAImpossivel : MonoBehaviour
 
         
     }
-    
+    // CORREÇÃO DEU VELHA //
+    public void DeuVelha()
+    {
+        if (Rodada < 9)
+        {
+            Rodada++;
+        }
+    }
+
 
     // Botão de Reset
 
@@ -409,6 +426,8 @@ public class IAImpossivel : MonoBehaviour
     {
         //if (Acabou && Venceu)
             Reset();
+        if (!Jogador1)
+            IAQ5();
 
     }
 
@@ -436,139 +455,116 @@ public class IAImpossivel : MonoBehaviour
         if (Q1.text == "O" && Q2.text == "O" && Q3.text == "")
         {
             Q3.text = "O";
-            Rodada++;
         }
         else if (Q2.text == "O" && Q3.text == "O" && Q1.text == "")
         {
             Q1.text = "O";
-            Rodada++;
         }
         else if (Q1.text == "O" && Q3.text == "O" && Q2.text == "")
         {
             Q2.text = "O";
-            Rodada++;
         }
         
         // Linha 2
         else if (Q4.text == "O" && Q5.text == "O" && Q6.text == "")
         {
             Q6.text = "O";
-            Rodada++;
         }
         else if (Q5.text == "O" && Q6.text == "O" && Q4.text == "")
         {
             Q4.text = "O";
-            Rodada++;
         }
         else if (Q4.text == "O" && Q6.text == "O" && Q5.text == "")
         {
             Q5.text = "O";
-            Rodada++;
         }
         
         // Linha 3
         else if (Q7.text == "O" && Q8.text == "O" && Q9.text == "")
         {
             Q9.text = "O";
-            Rodada++;
         }
         else if (Q8.text == "O" && Q9.text == "O" && Q7.text == "")
         {
             Q7.text = "O";
-            Rodada++;
         }
         else if (Q7.text == "O" && Q9.text == "O" && Q8.text == "")
         {
             Q8.text = "O";
-            Rodada++;
         }
 
         // Coluna 1
         else if (Q1.text == "O" && Q4.text == "O" && Q7.text == "")
         {
             Q7.text = "O";
-            Rodada++;
         }
         else if (Q1.text == "O" && Q7.text == "O" && Q4.text == "")
         {
             Q4.text = "O";
-            Rodada++;
         }
         else if (Q4.text == "O" && Q7.text == "O" && Q1.text == "")
         {
             Q1.text = "O";
-            Rodada++;
         }
 
         // Coluna 2
         else if (Q2.text == "O" && Q5.text == "O" && Q8.text == "")
         {
             Q8.text = "O";
-            Rodada++;
         }
         else if (Q5.text == "O" && Q8.text == "O" && Q2.text == "")
         {
             Q2.text = "O";
-            Rodada++;
         }
         else if (Q2.text == "O" && Q8.text == "O" && Q5.text == "")
         {
             Q5.text = "O";
-            Rodada++;
         }
 
         // Coluna 3
         else if (Q3.text == "O" && Q6.text == "O" && Q9.text == "")
         {
             Q9.text = "O";
-            Rodada++;
         }
         else if (Q6.text == "O" && Q9.text == "O" && Q3.text == "")
         {
             Q3.text = "O";
-            Rodada++;
         }
         else if (Q3.text == "O" && Q9.text == "O" && Q6.text == "")
         {
             Q6.text = "O";
-            Rodada++;
         }
 
         // Diagonal 1
         else if (Q1.text == "O" && Q5.text == "O" && Q9.text == "")
         {
             Q9.text = "O";
-            Rodada++;
         }
         else if (Q5.text == "O" && Q9.text == "O" && Q1.text == "")
         {
             Q1.text = "O";
-            Rodada++;
         }
         else if (Q1.text == "O" && Q9.text == "O" && Q5.text == "")
         {
             Q5.text = "O";
-            Rodada++;
         }
 
         // Diagonal 2
         else if (Q3.text == "O" && Q5.text == "O" && Q7.text == "")
         {
             Q7.text = "O";
-            Rodada++;
         }
         else if (Q3.text == "O" && Q7.text == "O" && Q5.text == "")
         {
             Q5.text = "O";
-            Rodada++;
         }
         else if (Q5.text == "O" && Q7.text == "O" && Q3.text == "")
         {
             Q3.text = "O";
-            Rodada++;
         }
     }
-   
+
+    // VERIFICAÇÃO QUADRO 1 //
     public void IAQ1()
     {
         if (Q2.text == "X" && Q3.text == "X" && Acabou == false)
@@ -576,23 +572,22 @@ public class IAImpossivel : MonoBehaviour
             Q1.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q4.text == "X" && Q7.text == "X" && Acabou == false)
         {
             Q1.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q5.text == "X" && Q9.text == "X" && Acabou == false)
         {
             Q1.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 2 //
     public void IAQ2()
     {
         if (Q1.text == "X" && Q3.text == "X" && Acabou == false)
@@ -600,16 +595,16 @@ public class IAImpossivel : MonoBehaviour
             Q2.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q5.text == "X" && Q8.text == "X" && Acabou == false)
         {
             Q2.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
-        }        
+        }
     }
+
+    // VERIFICAÇÃO QUADRO 3 //
     public void IAQ3()
     {
         if (Q1.text == "X" && Q2.text == "X" && Acabou == false)
@@ -617,23 +612,22 @@ public class IAImpossivel : MonoBehaviour
             Q3.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q6.text == "X" && Q9.text == "X" && Acabou == false)
         {
             Q3.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q5.text == "X" && Q7.text == "X" && Acabou == false)
         {
             Q3.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 4 //
     public void IAQ4()
     {
         if (Q5.text == "X" && Q6.text == "X" && Acabou == false)
@@ -641,24 +635,23 @@ public class IAImpossivel : MonoBehaviour
             Q4.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q1.text == "X" && Q7.text == "X" && Acabou == false)
         {
             Q4.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 5 //
     public void IAQ5()
     {
-        if (Q5.text == "")
+        if (Q5.text == "" && Rodada == 1)
         {
             Q5.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else
         {
@@ -668,32 +661,29 @@ public class IAImpossivel : MonoBehaviour
                 Q1.text = "O";
                 Jogador1 = true;
                 vezDoJogador.text = "Vez do jogador 1";
-                Rodada++;
             }
             else if (x == 1)
             {
                 Q3.text = "O";
                 Jogador1 = true;
                 vezDoJogador.text = "Vez do jogador 1";
-                Rodada++;
             }
             else if (x == 2)
             {
                 Q7.text = "O";
                 Jogador1 = true;
                 vezDoJogador.text = "Vez do jogador 1";
-                Rodada++;
             }
             else if (x == 3)
             {
                 Q9.text = "O";
                 Jogador1 = true;
                 vezDoJogador.text = "Vez do jogador 1";
-                Rodada++;
             }      
         }
-       
     }
+
+    // VERIFICAÇÃO QUADRO 6 //
     public void IAQ6()
     {
         if (Q4.text == "X" && Q5.text == "X" && Acabou == false)
@@ -701,16 +691,16 @@ public class IAImpossivel : MonoBehaviour
             Q6.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q3.text == "X" && Q9.text == "X" && Acabou == false)
         {
             Q6.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 7 //
     public void IAQ7()
     {
         if (Q1.text == "X" && Q4.text == "X" && Acabou == false)
@@ -718,23 +708,22 @@ public class IAImpossivel : MonoBehaviour
             Q7.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q8.text == "X" && Q9.text == "X" && Acabou == false)
         {
             Q7.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q3.text == "X" && Q5.text == "X" && Acabou == false)
         {
             Q7.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 8 //
     public void IAQ8()
     {
         if (Q2.text == "X" && Q5.text == "X" && Acabou == false)
@@ -742,16 +731,16 @@ public class IAImpossivel : MonoBehaviour
             Q8.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q7.text == "X" && Q9.text == "X" && Acabou == false)
         {
             Q8.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+
+    // VERIFICAÇÃO QUADRO 9 //
     public void IAQ9()
     {
         if (Q7.text == "X" && Q8.text == "X" && Acabou == false)
@@ -759,27 +748,24 @@ public class IAImpossivel : MonoBehaviour
             Q9.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q3.text == "X" && Q6.text == "X" && Acabou == false)
         {
             Q9.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
         else if (Q1.text == "X" && Q5.text == "X" && Acabou == false)
         {
             Q9.text = "O";
             Jogador1 = true;
             vezDoJogador.text = "Vez do jogador 1";
-            Rodada++;
         }
     }
+    
 
     /*
-     * ENtão, tem dois erros, 1 é o lado oposto, que quando vc escolhe a ia n faz nada, para resolver coloque um random
-     * 2ndo erro ele ta ganhando e me bloqueando, ja n basta a minha ex?
-     * 3icero n ta dando velha, so novinha
+     * ENtão, tem dois erros, 1 é o lado oposto, que quando vc escolhe a ia n faz nada, para resolver coloque um random/ COLOCAR CADA EXCEÇÃO JOGADA RANDOMICA NO ROUND 4
+     * 2ndo erro ele ta ganhando e me bloqueando, ja n basta a minha ex? COLOCAR UM IF PARA FAZER A JOGADA SOMENTE QUANDO O JOGO N TIVER ACABADO
      */
 }
