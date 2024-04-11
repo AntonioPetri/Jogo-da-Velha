@@ -678,8 +678,8 @@ public class IAImpossivel : MonoBehaviour
     }
 
     /*
-     * ENtão, tem dois erros, 1 é o lado oposto, que quando vc escolhe a ia n faz nada, para resolver coloque um random
-     * 2ndo erro ele ta ganhando e me bloqueando, ja n basta a minha ex?
-     * 3icero n ta dando velha, so novinha
+     * ENtão, tem dois erros, 1 é o lado oposto, que quando vc escolhe a ia n faz nada, para resolver coloque um random/ COLOCAR CADA EXCEÇÃO JOGADA RANDOMICA NO ROUND 4
+     * 2ndo erro ele ta ganhando e me bloqueando, ja n basta a minha ex? COLOCAR UM IF PARA FAZER A JOGADA SOMENTE QUANDO O JOGO N TIVER ACABADO
+     * 3icero n ta dando velha, so novinha / O PROBLEMA PROVAVELMENTE É AS RODADAS NÃO ESTÃO AUMENTANDO, TROCAR CONTADOR PARA DEBUGGAR
      */
 }
