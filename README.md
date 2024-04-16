@@ -23,5 +23,5 @@ Jogo da Velha feito no Unity 2D, com o C#, com uma IA que faz a melhor jogada
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/gabrieldejesus/readme-model](https://docs.unity3d.com/ScriptReference/Random.Range.html>
+1. <https://docs.unity3d.com/ScriptReference/Random.Range.html>
 2. <https://discussions.unity.com/t/declaring-public-voids/159133>
