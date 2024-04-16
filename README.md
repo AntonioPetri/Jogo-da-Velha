@@ -4,9 +4,7 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
-
-## Nome do Grupo
+# Nome do Projeto: Jogo da Velha com CPU
 
 ## Integrantes: Antônio Petri RA: 24026144, Daniel Kyoshi RA: 24026509, Gabriel Paschoal RA: 21010656, Vitor Kenzo RA: 24026113, Thiago Akira RA: 24026254
 
