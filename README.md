@@ -8,10 +8,9 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a Antônio Petri RA: 24026144 a>, <a href="https://www.linkedin.com/in/victorbarq/">Saitama One</a>, <a href="https://www.linkedin.com/in/victorbarq/">Ikki de Fenix</a>, <a href="https://www.linkedin.com/in/victorbarq/">Yusuke Urameshi</a>, <a href="https://www.linkedin.com/in/victorbarq/">Roronoa Zoro</a>
+## Integrantes: Antônio Petri RA: 24026144, Daniel Kyoshi RA: 24026509, Gabriel Paschoal RA: 21010656, Vitor Kenzo RA: 24026113, Thiago Akira RA: 24026254
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
-
+## Professores Orientadores: Professor Adriano
 ## Descrição
 
 <p align="center">
